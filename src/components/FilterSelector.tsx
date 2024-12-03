@@ -1,5 +1,10 @@
 import { Filter } from '@/types';
 
+interface FilterSelectorProps {
+  selectedFilter: string;
+  onFilterSelect: (filter: Filter) => void;
+}
+
 export function FilterSelector({ selectedFilter, onFilterSelect }: FilterSelectorProps) {
   const filters: Filter[] = [
     { id: 'white', color: '#ffffff' },
